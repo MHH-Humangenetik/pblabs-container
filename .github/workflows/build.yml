@@ -30,7 +30,7 @@ jobs:
     steps:
       - name: Login to GHCR
         if: github.event_name == 'schedule'
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -84,7 +84,7 @@ jobs:
 
       - name: Login to GHCR
         if: github.event_name != 'pull_request'
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
