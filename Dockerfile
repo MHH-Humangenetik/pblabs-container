@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 ARG PBLAB_VERSION=20261021
 
-FROM alpine:3.22 AS download
+FROM alpine:3.24 AS download
 ARG PBLAB_VERSION
 ADD https://github.com/PacificBiosciences/pblab/releases/download/${PBLAB_VERSION}/pblab-${PBLAB_VERSION}-linux-x86_64.tar.xz /tmp/pblab.tar.xz
 RUN mkdir /pblab \
