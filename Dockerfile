@@ -14,7 +14,7 @@ FROM gcr.io/distroless/cc-debian12 AS slim
 COPY --from=download /pblab/bin/ /usr/local/bin/
 COPY --from=download /pblab/LICENSE /usr/share/doc/pblab/LICENSE
 
-FROM debian:12-slim AS nextflow
+FROM debian:13-slim AS nextflow
 
 COPY --from=download /pblab/bin/ /usr/local/bin/
 COPY --from=download /pblab/LICENSE /usr/share/doc/pblab/LICENSE
